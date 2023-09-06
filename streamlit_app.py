@@ -5,9 +5,9 @@ from tensorflow.keras.models import load_model
 
 from PIL import Image
 import numpy as np
-st.title("Sea Animals Image Classification")
+st.title("Weather Image Classification")
 
-st.write("Predict the Sea Animal that is being represented in the image.")
+st.write("Predict the Weather that is being represented in the image.")
 
 model = load_model("C:/Users/91934/Downloads/DLDEPLOYMENT/weathertransfer.h5",custom_objects={'KerasLayer':hub.KerasLayer})
 labels={
@@ -24,7 +24,7 @@ labels={
     10:'snow'
 }
 uploaded_file = st.file_uploader(
-    "Upload an image of a Sea Animal:", type=['jpg','png','jpeg']
+    "Upload an image of a Weather:", type=['jpg','png','jpeg']
 )
 predictions=-1
 if uploaded_file is not None:
