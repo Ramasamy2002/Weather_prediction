@@ -9,7 +9,7 @@ st.title("Weather Image Classification")
 
 st.write("Predict the Weather that is being represented in the image.")
 
-model = load_model("C:/Users/91934/Downloads/DLDEPLOYMENT/weathertransfer.h5",custom_objects={'KerasLayer':hub.KerasLayer})
+model = load_model("weathertransfer.h5",custom_objects={'KerasLayer':hub.KerasLayer})
 labels={
     0:'dew',
     1:'fogsmog',
